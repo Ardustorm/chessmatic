@@ -32,15 +32,17 @@ difference() {
 
 }
 
-translate([25,-30,0])
-flap();
-translate([-25,-30,0])
-flap();
+translate([0,0,-thickness/2]) {
+   translate([25,-30,0])
+      flap();
+   translate([-25,-30,0])
+      flap();
 
-translate([-25,30,0]) rotate([0,0,180])
-flap();
-translate([25,30,0]) rotate([0,0,180])
-flap();
+   translate([-25,30,0]) rotate([0,0,180])
+      flap();
+   translate([25,30,0]) rotate([0,0,180])
+      flap();
+}
 
 
 module hole() {
